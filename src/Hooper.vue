@@ -72,7 +72,7 @@ export default {
     },
     // enable rtl mode
     rtl: {
-      default: null,
+      default: false,
       type: Boolean
     },
     // enable auto sliding to carousel
@@ -311,7 +311,7 @@ export default {
     },
     initDefaults () {
       this.breakpoints = this.settings.breakpoints;
-      this.defaults = {...this.$props, ...this.settings};
+      this.defaults = this.$props, this.settings;
       this.$settings = this.defaults;
     },
 
